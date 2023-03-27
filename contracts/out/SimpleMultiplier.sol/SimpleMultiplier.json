@@ -1,0 +1,916 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "plonkVerifierAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "result",
+          "type": "bool"
+        }
+      ],
+      "name": "ProofResult",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "s_plonkVerifierAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "proof",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "pubSignals",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "submitProof",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b5060405161044c38038061044c83398101604081905261002f91610054565b600080546001600160a01b0319166001600160a01b0392909216919091179055610084565b60006020828403121561006657600080fd5b81516001600160a01b038116811461007d57600080fd5b9392505050565b6103b9806100936000396000f3fe608060405234801561001057600080fd5b50600436106100355760003560e01c8062c80d811461003a57806344896a9a14610062575b600080fd5b61004d61004836600461020c565b61008d565b60405190151581526020015b60405180910390f35b600054610075906001600160a01b031681565b6040516001600160a01b039091168152602001610059565b60008054604051631e8e1e1360e01b815282916001600160a01b031690631e8e1e13906100c090879087906004016102c4565b602060405180830381865afa1580156100dd573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610101919061035a565b90507fb6030296ed6d28f593d0c257c080ef243cd60eb419e82d45d9e530c59391510281604051610136911515815260200190565b60405180910390a19392505050565b634e487b7160e01b600052604160045260246000fd5b604051601f8201601f1916810167ffffffffffffffff8111828210171561018457610184610145565b604052919050565b600082601f83011261019d57600080fd5b8135602067ffffffffffffffff8211156101b9576101b9610145565b8160051b6101c882820161015b565b92835284810182019282810190878511156101e257600080fd5b83870192505b84831015610201578235825291830191908301906101e8565b979650505050505050565b6000806040838503121561021f57600080fd5b823567ffffffffffffffff8082111561023757600080fd5b818501915085601f83011261024b57600080fd5b813560208282111561025f5761025f610145565b610271601f8301601f1916820161015b565b828152888284870101111561028557600080fd5b828286018383013760009281018201929092529094508501359150808211156102ad57600080fd5b506102ba8582860161018c565b9150509250929050565b604081526000835180604084015260005b818110156102f257602081870181015160608684010152016102d5565b50600060608285010152601f19601f82011683019050606081016020606085840301818601528186518084526080850191508288019450600093505b8084101561034e578451825293820193600193909301929082019061032e565b50979650505050505050565b60006020828403121561036c57600080fd5b8151801515811461037c57600080fd5b939250505056fea2646970667358221220ed422c36f943a88fbf8c5909c5486ac586e1b652592bc722aa62c7a5dd99e25c64736f6c63430008110033",
+    "sourceMap": "230:572:14:-:0;;;343:104;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;395:22;:45;;-1:-1:-1;;;;;;395:45:14;-1:-1:-1;;;;;395:45:14;;;;;;;;;;230:572;;14:290:15;84:6;137:2;125:9;116:7;112:23;108:32;105:52;;;153:1;150;143:12;105:52;179:16;;-1:-1:-1;;;;;224:31:15;;214:42;;204:70;;270:1;267;260:12;204:70;293:5;14:290;-1:-1:-1;;;14:290:15:o;:::-;230:572:14;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100355760003560e01c8062c80d811461003a57806344896a9a14610062575b600080fd5b61004d61004836600461020c565b61008d565b60405190151581526020015b60405180910390f35b600054610075906001600160a01b031681565b6040516001600160a01b039091168152602001610059565b60008054604051631e8e1e1360e01b815282916001600160a01b031690631e8e1e13906100c090879087906004016102c4565b602060405180830381865afa1580156100dd573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610101919061035a565b90507fb6030296ed6d28f593d0c257c080ef243cd60eb419e82d45d9e530c59391510281604051610136911515815260200190565b60405180910390a19392505050565b634e487b7160e01b600052604160045260246000fd5b604051601f8201601f1916810167ffffffffffffffff8111828210171561018457610184610145565b604052919050565b600082601f83011261019d57600080fd5b8135602067ffffffffffffffff8211156101b9576101b9610145565b8160051b6101c882820161015b565b92835284810182019282810190878511156101e257600080fd5b83870192505b84831015610201578235825291830191908301906101e8565b979650505050505050565b6000806040838503121561021f57600080fd5b823567ffffffffffffffff8082111561023757600080fd5b818501915085601f83011261024b57600080fd5b813560208282111561025f5761025f610145565b610271601f8301601f1916820161015b565b828152888284870101111561028557600080fd5b828286018383013760009281018201929092529094508501359150808211156102ad57600080fd5b506102ba8582860161018c565b9150509250929050565b604081526000835180604084015260005b818110156102f257602081870181015160608684010152016102d5565b50600060608285010152601f19601f82011683019050606081016020606085840301818601528186518084526080850191508288019450600093505b8084101561034e578451825293820193600193909301929082019061032e565b50979650505050505050565b60006020828403121561036c57600080fd5b8151801515811461037c57600080fd5b939250505056fea2646970667358221220ed422c36f943a88fbf8c5909c5486ac586e1b652592bc722aa62c7a5dd99e25c64736f6c63430008110033",
+    "sourceMap": "230:572:14:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;551:249;;;;;;:::i;:::-;;:::i;:::-;;;2304:14:15;;2297:22;2279:41;;2267:2;2252:18;551:249:14;;;;;;;;262:37;;;;;-1:-1:-1;;;;;262:37:14;;;;;;-1:-1:-1;;;;;2495:32:15;;;2477:51;;2465:2;2450:18;262:37:14;2331:203:15;551:249:14;637:4;682:22;;667:69;;-1:-1:-1;;;667:69:14;;637:4;;-1:-1:-1;;;;;682:22:14;;667:50;;:69;;718:5;;725:10;;667:69;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;653:83;;751:19;763:6;751:19;;;;2304:14:15;2297:22;2279:41;;2267:2;2252:18;;2139:187;751:19:14;;;;;;;;787:6;551:249;-1:-1:-1;;;551:249:14:o;14:127:15:-;75:10;70:3;66:20;63:1;56:31;106:4;103:1;96:15;130:4;127:1;120:15;146:275;217:2;211:9;282:2;263:13;;-1:-1:-1;;259:27:15;247:40;;317:18;302:34;;338:22;;;299:62;296:88;;;364:18;;:::i;:::-;400:2;393:22;146:275;;-1:-1:-1;146:275:15:o;426:712::-;480:5;533:3;526:4;518:6;514:17;510:27;500:55;;551:1;548;541:12;500:55;587:6;574:20;613:4;636:18;632:2;629:26;626:52;;;658:18;;:::i;:::-;704:2;701:1;697:10;727:28;751:2;747;743:11;727:28;:::i;:::-;789:15;;;859;;;855:24;;;820:12;;;;891:15;;;888:35;;;919:1;916;909:12;888:35;955:2;947:6;943:15;932:26;;967:142;983:6;978:3;975:15;967:142;;;1049:17;;1037:30;;1000:12;;;;1087;;;;967:142;;;1127:5;426:712;-1:-1:-1;;;;;;;426:712:15:o;1143:991::-;1245:6;1253;1306:2;1294:9;1285:7;1281:23;1277:32;1274:52;;;1322:1;1319;1312:12;1274:52;1362:9;1349:23;1391:18;1432:2;1424:6;1421:14;1418:34;;;1448:1;1445;1438:12;1418:34;1486:6;1475:9;1471:22;1461:32;;1531:7;1524:4;1520:2;1516:13;1512:27;1502:55;;1553:1;1550;1543:12;1502:55;1589:2;1576:16;1611:4;1634:2;1630;1627:10;1624:36;;;1640:18;;:::i;:::-;1682:53;1725:2;1706:13;;-1:-1:-1;;1702:27:15;1698:36;;1682:53;:::i;:::-;1758:2;1751:5;1744:17;1798:7;1793:2;1788;1784;1780:11;1776:20;1773:33;1770:53;;;1819:1;1816;1809:12;1770:53;1874:2;1869;1865;1861:11;1856:2;1849:5;1845:14;1832:45;1918:1;1897:14;;;1893:23;;1886:34;;;;1901:5;;-1:-1:-1;1982:18:15;;1969:32;;-1:-1:-1;2013:16:15;;;2010:36;;;2042:1;2039;2032:12;2010:36;;2065:63;2120:7;2109:8;2098:9;2094:24;2065:63;:::i;:::-;2055:73;;;1143:991;;;;;:::o;2539:1102::-;2764:2;2753:9;2746:21;2727:4;2796:6;2790:13;2839:6;2834:2;2823:9;2819:18;2812:34;2864:1;2874:144;2888:6;2885:1;2882:13;2874:144;;;3001:4;2985:14;;;2981:25;;2975:32;2970:2;2951:17;;;2947:26;2940:68;2903:12;2874:144;;;2878:3;3067:1;3062:2;3053:6;3042:9;3038:22;3034:31;3027:42;3128:2;3124:7;3119:2;3111:6;3107:15;3103:29;3092:9;3088:45;3078:55;;3161:2;3157;3153:11;3183:4;3247:2;3235:9;3231:2;3227:18;3223:27;3218:2;3207:9;3203:18;3196:55;3271:3;3305:6;3299:13;3333:8;3328:3;3321:21;3366:3;3362:2;3358:12;3351:19;;3405:2;3397:6;3393:15;3379:29;;3428:1;3417:12;;3438:177;3454:8;3449:3;3446:17;3438:177;;;3521:13;;3509:26;;3590:15;;;;3482:1;3473:11;;;;;3555:12;;;;3438:177;;;-1:-1:-1;3632:3:15;2539:1102;-1:-1:-1;;;;;;;2539:1102:15:o;3646:277::-;3713:6;3766:2;3754:9;3745:7;3741:23;3737:32;3734:52;;;3782:1;3779;3772:12;3734:52;3814:9;3808:16;3867:5;3860:13;3853:21;3846:5;3843:32;3833:60;;3889:1;3886;3879:12;3833:60;3912:5;3646:277;-1:-1:-1;;;3646:277:15:o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "s_plonkVerifierAddress()": "44896a9a",
+    "submitProof(bytes,uint256[])": "00c80d81"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"plonkVerifierAddress\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"result\",\"type\":\"bool\"}],\"name\":\"ProofResult\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"s_plonkVerifierAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"proof\",\"type\":\"bytes\"},{\"internalType\":\"uint256[]\",\"name\":\"pubSignals\",\"type\":\"uint256[]\"}],\"name\":\"submitProof\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/SimpleMultiplier.sol\":\"SimpleMultiplier\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\"]},\"sources\":{\"src/SimpleMultiplier.sol\":{\"keccak256\":\"0x7dfe8c56ad30633f91ce4bf5555d28af36e4d3fc400fc6edf7294226eaf9ec28\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://d0080138b7cd8d0d3b9b179d03c3fc40722d7cb3caa9bcf7236d37b3e58e5eae\",\"dweb:/ipfs/QmSTNc68c2cD4cQfJmy4RrDNPobgrDmKapSG8Q1oY8dEtk\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "plonkVerifierAddress",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bool",
+              "name": "result",
+              "type": "bool",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "ProofResult",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "s_plonkVerifierAddress",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes",
+              "name": "proof",
+              "type": "bytes"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "pubSignals",
+              "type": "uint256[]"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "submitProof",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/SimpleMultiplier.sol": "SimpleMultiplier"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/SimpleMultiplier.sol": {
+        "keccak256": "0x7dfe8c56ad30633f91ce4bf5555d28af36e4d3fc400fc6edf7294226eaf9ec28",
+        "urls": [
+          "bzz-raw://d0080138b7cd8d0d3b9b179d03c3fc40722d7cb3caa9bcf7236d37b3e58e5eae",
+          "dweb:/ipfs/QmSTNc68c2cD4cQfJmy4RrDNPobgrDmKapSG8Q1oY8dEtk"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/SimpleMultiplier.sol",
+    "id": 23991,
+    "exportedSymbols": {
+      "IPlonkVerifier": [
+        23946
+      ],
+      "SimpleMultiplier": [
+        23990
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:763:14",
+    "nodes": [
+      {
+        "id": 23935,
+        "nodeType": "PragmaDirective",
+        "src": "39:24:14",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ]
+      },
+      {
+        "id": 23946,
+        "nodeType": "ContractDefinition",
+        "src": "99:129:14",
+        "nodes": [
+          {
+            "id": 23945,
+            "nodeType": "FunctionDefinition",
+            "src": "130:96:14",
+            "nodes": [],
+            "functionSelector": "1e8e1e13",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verifyProof",
+            "nameLocation": "139:11:14",
+            "parameters": {
+              "id": 23941,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23937,
+                  "mutability": "mutable",
+                  "name": "proof",
+                  "nameLocation": "164:5:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 23945,
+                  "src": "151:18:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 23936,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "151:5:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 23940,
+                  "mutability": "mutable",
+                  "name": "pubSignals",
+                  "nameLocation": "185:10:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 23945,
+                  "src": "171:24:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 23938,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "171:4:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 23939,
+                    "nodeType": "ArrayTypeName",
+                    "src": "171:6:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "150:46:14"
+            },
+            "returnParameters": {
+              "id": 23944,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23943,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 23945,
+                  "src": "220:4:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 23942,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "220:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "219:6:14"
+            },
+            "scope": 23946,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPlonkVerifier",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          23946
+        ],
+        "name": "IPlonkVerifier",
+        "nameLocation": "109:14:14",
+        "scope": 23991,
+        "usedErrors": []
+      },
+      {
+        "id": 23990,
+        "nodeType": "ContractDefinition",
+        "src": "230:572:14",
+        "nodes": [
+          {
+            "id": 23948,
+            "nodeType": "VariableDeclaration",
+            "src": "262:37:14",
+            "nodes": [],
+            "constant": false,
+            "functionSelector": "44896a9a",
+            "mutability": "mutable",
+            "name": "s_plonkVerifierAddress",
+            "nameLocation": "277:22:14",
+            "scope": 23990,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 23947,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "262:7:14",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 23952,
+            "nodeType": "EventDefinition",
+            "src": "306:31:14",
+            "nodes": [],
+            "anonymous": false,
+            "eventSelector": "b6030296ed6d28f593d0c257c080ef243cd60eb419e82d45d9e530c593915102",
+            "name": "ProofResult",
+            "nameLocation": "312:11:14",
+            "parameters": {
+              "id": 23951,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23950,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "result",
+                  "nameLocation": "329:6:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 23952,
+                  "src": "324:11:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 23949,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "324:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "323:13:14"
+            }
+          },
+          {
+            "id": 23962,
+            "nodeType": "FunctionDefinition",
+            "src": "343:104:14",
+            "nodes": [],
+            "body": {
+              "id": 23961,
+              "nodeType": "Block",
+              "src": "385:62:14",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 23959,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 23957,
+                      "name": "s_plonkVerifierAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 23948,
+                      "src": "395:22:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 23958,
+                      "name": "plonkVerifierAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 23954,
+                      "src": "420:20:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "395:45:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 23960,
+                  "nodeType": "ExpressionStatement",
+                  "src": "395:45:14"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 23955,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23954,
+                  "mutability": "mutable",
+                  "name": "plonkVerifierAddress",
+                  "nameLocation": "363:20:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 23962,
+                  "src": "355:28:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 23953,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "355:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "354:30:14"
+            },
+            "returnParameters": {
+              "id": 23956,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "385:0:14"
+            },
+            "scope": 23990,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 23989,
+            "nodeType": "FunctionDefinition",
+            "src": "551:249:14",
+            "nodes": [],
+            "body": {
+              "id": 23988,
+              "nodeType": "Block",
+              "src": "643:157:14",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    23973
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 23973,
+                      "mutability": "mutable",
+                      "name": "result",
+                      "nameLocation": "658:6:14",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 23988,
+                      "src": "653:11:14",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "typeName": {
+                        "id": 23972,
+                        "name": "bool",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "653:4:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 23981,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 23978,
+                        "name": "proof",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 23964,
+                        "src": "718:5:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      {
+                        "id": 23979,
+                        "name": "pubSignals",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 23967,
+                        "src": "725:10:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        },
+                        {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                          "typeString": "uint256[] memory"
+                        }
+                      ],
+                      "expression": {
+                        "arguments": [
+                          {
+                            "id": 23975,
+                            "name": "s_plonkVerifierAddress",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 23948,
+                            "src": "682:22:14",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          ],
+                          "id": 23974,
+                          "name": "IPlonkVerifier",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 23946,
+                          "src": "667:14:14",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_IPlonkVerifier_$23946_$",
+                            "typeString": "type(contract IPlonkVerifier)"
+                          }
+                        },
+                        "id": 23976,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "667:38:14",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IPlonkVerifier_$23946",
+                          "typeString": "contract IPlonkVerifier"
+                        }
+                      },
+                      "id": 23977,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "706:11:14",
+                      "memberName": "verifyProof",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 23945,
+                      "src": "667:50:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$_t_bytes_memory_ptr_$_t_array$_t_uint256_$dyn_memory_ptr_$returns$_t_bool_$",
+                        "typeString": "function (bytes memory,uint256[] memory) view external returns (bool)"
+                      }
+                    },
+                    "id": 23980,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "667:69:14",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "653:83:14"
+                },
+                {
+                  "eventCall": {
+                    "arguments": [
+                      {
+                        "id": 23983,
+                        "name": "result",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 23973,
+                        "src": "763:6:14",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 23982,
+                      "name": "ProofResult",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 23952,
+                      "src": "751:11:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bool_$returns$__$",
+                        "typeString": "function (bool)"
+                      }
+                    },
+                    "id": 23984,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "751:19:14",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 23985,
+                  "nodeType": "EmitStatement",
+                  "src": "746:24:14"
+                },
+                {
+                  "expression": {
+                    "id": 23986,
+                    "name": "result",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 23973,
+                    "src": "787:6:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 23971,
+                  "id": 23987,
+                  "nodeType": "Return",
+                  "src": "780:13:14"
+                }
+              ]
+            },
+            "functionSelector": "00c80d81",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "submitProof",
+            "nameLocation": "560:11:14",
+            "parameters": {
+              "id": 23968,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23964,
+                  "mutability": "mutable",
+                  "name": "proof",
+                  "nameLocation": "585:5:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 23989,
+                  "src": "572:18:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 23963,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "572:5:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 23967,
+                  "mutability": "mutable",
+                  "name": "pubSignals",
+                  "nameLocation": "609:10:14",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 23989,
+                  "src": "592:27:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 23965,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "592:7:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 23966,
+                    "nodeType": "ArrayTypeName",
+                    "src": "592:9:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "571:49:14"
+            },
+            "returnParameters": {
+              "id": 23971,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23970,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 23989,
+                  "src": "637:4:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 23969,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "637:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "636:6:14"
+            },
+            "scope": 23990,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "SimpleMultiplier",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          23990
+        ],
+        "name": "SimpleMultiplier",
+        "nameLocation": "239:16:14",
+        "scope": 23991,
+        "usedErrors": []
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 14
+}

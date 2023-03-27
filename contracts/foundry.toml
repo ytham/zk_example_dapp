@@ -1,0 +1,8 @@
+[profile.default]
+src = 'src'
+out = 'out'
+libs = ['lib']
+
+# Add this 
+[rpc_endpoints]
+goerli = "${GOERLI_RPC_URL}"
